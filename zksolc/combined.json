@@ -1,0 +1,15 @@
+{
+    "contracts": {
+        "src/Counter.sol:Counter": {
+            "hashes": {
+                "increment()": "d09de08a",
+                "number()": "8381f58a",
+                "setNumber(uint256)": "3fb5c1cb"
+            },
+            "factory-deps": {}
+        }
+    },
+    "version": "0.8.17+commit.8df45f5f.Linux.g++",
+    "long_version": "0.8.17+commit.8df45f5f.Linux.g++",
+    "zk_version": "1.3.0"
+}

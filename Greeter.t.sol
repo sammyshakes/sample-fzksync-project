@@ -5,7 +5,7 @@ import "forge-std/Test.sol";
 import "../src/Greeter.sol";
 import "../interfaces/IContractDeployer.sol";
 
-contract CounterTest is Test {
+contract GreeterTest is Test {
     Greeter public greeter;
 
     // IContractDeployer public cxDeployer;

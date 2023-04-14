@@ -18,6 +18,8 @@ contract SimpleFactory {
     bytes32 public stepChildBytecodeHash;
     bytes32 salt = 0x0000;
 
+    string public greeting = "hello";
+
     event ChildCreated(address childAddress, uint256 data);
     event StepChildCreated(address childAddress);
 
@@ -77,8 +79,8 @@ contract SimpleFactory {
         disabledCount++;
     }
 
-    function setChildBytecodeHash(bytes32 _childBytecodeHash) external {
-        childBytecodeHash = _childBytecodeHash;
+    function setGreeting(string memory newGreeting) external {
+        greeting = newGreeting;
     }
 
     function newChild(uint256 data) external {
@@ -90,9 +92,5 @@ contract SimpleFactory {
     function newStepChild() external {
         StepChild stepChild = new StepChild();
         stepChildren.push(stepChild);
-    }
-
-    function hello() external pure returns (string memory) {
-        return "hello";
     }
 }

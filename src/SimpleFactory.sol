@@ -77,6 +77,10 @@ contract SimpleFactory {
         disabledCount++;
     }
 
+    function setChildBytecodeHash(bytes32 _childBytecodeHash) external {
+        childBytecodeHash = _childBytecodeHash;
+    }
+
     function newChild(uint256 data) external {
         Child child = new Child(data, children.length);
         children.push(child);

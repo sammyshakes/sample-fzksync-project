@@ -16,7 +16,7 @@ contract SimpleFactory {
 
     bytes32 public childBytecodeHash;
     bytes32 public stepChildBytecodeHash;
-    bytes32 salt = 0x0000;
+    bytes32 salt = bytes32("is salt");
 
     string public greeting = "hello";
 

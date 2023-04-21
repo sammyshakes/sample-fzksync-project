@@ -1,0 +1,42 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "src/Greeter.sol": {
+      "content": "//SPDX-License-Identifier: Unlicense\r\npragma solidity ^0.8.0;\r\n\r\n// import \"../lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol\";\r\n\r\ncontract Greeter {\r\n    string private greeting;\r\n    string private greeting2;\r\n    string private greeting3;\r\n\r\n    constructor(string memory _greeting) {\r\n        greeting = _greeting;\r\n    }\r\n\r\n    function greet() public view returns (string memory) {\r\n        return greeting;\r\n    }\r\n\r\n    function setGreeting(string memory _greeting) public {\r\n        greeting = _greeting;\r\n    }\r\n}\r\n"
+    }
+  },
+  "settings": {
+    "remappings": [
+      "ds-test/=lib/forge-std/lib/ds-test/src/",
+      "era-system-contracts/=lib/era-system-contracts/contracts/",
+      "forge-std/=lib/forge-std/src/"
+    ],
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "metadata": {
+      "bytecodeHash": "ipfs",
+      "appendCBOR": true
+    },
+    "outputSelection": {
+      "*": {
+        "": [
+          "ast",
+          "metadata",
+          "userdoc",
+          "devdoc",
+          "storageLayout",
+          "irOptimized"
+        ],
+        "*": [
+          "abi",
+          "evm.methodIdentifiers",
+          "evm.legacyAssembly"
+        ]
+      }
+    },
+    "evmVersion": "london",
+    "libraries": {}
+  }
+}

@@ -30,7 +30,7 @@ contract SimpleFactory {
 
     function createStepChild() external returns (address accountAddress) {
         (bool success, bytes memory returnData) = SystemContractsCaller.systemCallWithReturndata(
-            uint32(gasleft()),
+            uint32(1000000),
             address(DEPLOYER_SYSTEM_CONTRACT),
             uint128(0),
             abi.encodeCall(DEPLOYER_SYSTEM_CONTRACT.create, (salt, stepChildBytecodeHash, new bytes(0)))
@@ -47,7 +47,7 @@ contract SimpleFactory {
 
     function createChild(uint256 data) external returns (address accountAddress) {
         (bool success, bytes memory returnData) = SystemContractsCaller.systemCallWithReturndata(
-            uint32(gasleft()),
+            uint32(1000000),
             address(DEPLOYER_SYSTEM_CONTRACT),
             uint128(0),
             abi.encodeCall(

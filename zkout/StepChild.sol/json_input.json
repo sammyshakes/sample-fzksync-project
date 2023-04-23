@@ -1,0 +1,42 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "src/StepChild.sol": {
+      "content": "//SPDX-License-Identifier: Unlicense\npragma solidity ^0.8.0;\n\ncontract StepChild {\n    bool public isEnabled;\n\n    constructor() {}\n\n    function disable() external {\n        isEnabled = false;\n    }\n\n    function enable() external {\n        isEnabled = true;\n    }\n}\n"
+    }
+  },
+  "settings": {
+    "remappings": [
+      "ds-test/=lib/forge-std/lib/ds-test/src/",
+      "era-system-contracts/=lib/era-system-contracts/contracts/",
+      "forge-std/=lib/forge-std/src/"
+    ],
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "metadata": {
+      "bytecodeHash": "ipfs",
+      "appendCBOR": true
+    },
+    "outputSelection": {
+      "*": {
+        "": [
+          "ast",
+          "metadata",
+          "userdoc",
+          "devdoc",
+          "storageLayout",
+          "irOptimized"
+        ],
+        "*": [
+          "abi",
+          "evm.methodIdentifiers",
+          "evm.legacyAssembly"
+        ]
+      }
+    },
+    "evmVersion": "london",
+    "libraries": {}
+  }
+}

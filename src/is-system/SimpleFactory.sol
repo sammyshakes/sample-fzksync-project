@@ -1,11 +1,11 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.0;
 
-import "../lib/era-system-contracts/contracts/Constants.sol";
-import "../lib/era-system-contracts/contracts/libraries/SystemContractsCaller.sol";
+import "../../lib/era-system-contracts/contracts/Constants.sol";
+import "../../lib/era-system-contracts/contracts/libraries/SystemContractsCaller.sol";
 
-import "./Child.sol";
-import "./StepChild.sol";
+import "../Child.sol";
+import "../StepChild.sol";
 
 contract SimpleFactory {
     Child[] public children;

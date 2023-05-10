@@ -4,7 +4,6 @@ out = 'out'
 src = 'src'
 
 [rpc_endpoints]
-goerli = "${GOERLI_RPC_URL}"
 zk-l1-local = "http://localhost:8545/"
 zk-l2-local = "http://localhost:3050"
 zk-rpc = "${ZKSYNC_RPC_URL}"
